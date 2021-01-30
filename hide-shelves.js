@@ -9,10 +9,12 @@
 // @version     1.0
 // ==/UserScript==
 
+/* jshint esversion:6 */
+(function(){
 "use strict";
 
 function modifyShelfList(list) {
-  let hid = false
+  let hid = false;
   //hide all shelves beginning with "#"
   for (const li of list.children) {
     const a = li.querySelector(":scope > a");//boomer browsers cant, xd
@@ -46,7 +48,7 @@ function modifyShelfList(list) {
         }
         this.lastChild.data = "Show hidden";
       }
-    }
+    };
     
     list.append(li);
   }
@@ -63,4 +65,6 @@ const ob = new MutationObserver((_, ob) => {
 
 ob.observe($(".navigation-drawer"), {childList: true});
 
-function $(q) { return document.querySelector(q) }
+}());
+
+function $(q) { return document.querySelector(q); }
