@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name        hide shelves - fimfiction.net
-// @namespace   auceps.github.io
-// @match       *://www.fimfiction.net/*
-// @grant       none
-// @version     1.0
 // @author      auceps
 // @description hides bookshelves that start with # from the header/sidebar Library, and adds a toggle to show them again.
+// @namespace   http://auceps.github.io
+// @match       *://www.fimfiction.net/*
+// @grant       none
+// @license     MIT
+// @version     1.0
 // ==/UserScript==
 
 "use strict";
